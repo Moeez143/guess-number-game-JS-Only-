@@ -1,0 +1,27 @@
+let random= Math.floor(Math.random() * 100) + 1; 
+    random= parseInt(random);
+    // this generate the random number
+
+    let count = 100; //this is number chances
+    let guess;
+    do {
+        guess = prompt("Enter the number you guess between 1 to 100?");
+        count = count - 1;
+        if (guess == random) {
+            console.log("Congrats You Guess Correct Number...");
+            // document.write("Congrats You Guess Correct Number...");
+            
+            console.log(`Your score is : ${count} `);
+        } else if (guess < random) {
+            // document.write("less");
+            
+            console.log("Sorry Your Guess is less Than Hidden Number...");
+        } else if (guess > random) {
+            // document.write("greater");
+            console.log("Sorry Your Guess is Greater Than Hidden Number...");
+        } else if (guess >100){
+            // document.write("more than 100");
+            console.log("Please Enter the number between 1 to 100...");
+        }
+    } while (guess != random);
+    console.log("Game Over"); 
